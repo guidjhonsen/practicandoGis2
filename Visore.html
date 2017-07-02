@@ -27,6 +27,25 @@
             border: solid 3px blue;
         }
     </style>
+
+    <script type="text/javascript">
+        var init = function(){
+            var proyeccion = new OpenLayers.Projection("EPSG:4326");
+            var controlNavegacion=new OpenLayers.Control.Navigation();
+            var controlZoom = new OpenLayers.Control.PanZoomBar();
+            var propiedades = {
+                projection: proyeccion,
+                units: 'm',
+                controls:[controlNavegacion, controlZoom]
+            };
+            var map = new OpenLayers.Map("mapa", propiedades);
+
+            var layerOSM = new OpenLayers.Layer.OSM();
+            map.addLayer(layerOSM);
+        }
+        window.onload = init;
+    </script>
+
     </head>
     <body>
         <div class="cabecera">
