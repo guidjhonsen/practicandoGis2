@@ -4,10 +4,34 @@
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="miEstilo.css">
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.12/theme/default/style.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.12/OpenLayers.min.js"></script>
+    <style type="text/css">
+        html, body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        .cabecera{
+            height: 50px;
+            background-color: blue;
+        }
+        .cabecera h2{
+            color: #fffccc;
+            margin-top:1;
+        }
+        #mapa{
+            height: 300px;
+            width: 600px;
+            border: solid 3px blue;
+        }
+    </style>
     </head>
     <body>
-        
+        <div class="cabecera">
+            <h2>Visor de OpenLayers</h2>
+        </div>
+        <div id="mapa"></div>
     </body>
 </html>
