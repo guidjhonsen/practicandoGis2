@@ -22,8 +22,8 @@
 			margin-top: 0;
 		}
 		#mapa{
-			height: 300px;
-			width: 600px;
+			height: 400px;
+			width: 700px;
 			border: solid 3px blue;
 		}
 		
@@ -35,7 +35,7 @@
 			var proyeccion2 = new OpenLayers.Projection("EPSG:4326");
 			var controlNavegacion = new OpenLayers.Control.Navigation();
 			var controlZoom = new OpenLayers.Control.PanZoomBar(); // Zoom
-			var host = "http://192.168.42.222";
+			var host = "http://192.168.42.167";
 		//	OpenLayers.ProxyHost = "/cgi-bin/proxy.cgi?url=";
 
 			// Propiedades del objeto Map
@@ -63,8 +63,12 @@
                         key: "AoYx0TZvI8ceg0ZL1ZESpqDmgh0ltnPp5XheFiAPL3r4hskqgqLu4MOejhPeBnzP",
                         type: "Road"
                     });
-
-			map.addLayers([layerGoogleHibrido, layerGoogleSatelital, layerGoogleTerrain, bingRoad]);
+			var gmap = new OpenLayers.Layer.Google(
+        		"Google Streets", // the default
+       			 {numZoomLevels: 20}
+  			);
+			
+			map.addLayers([layerGoogleHibrido, layerGoogleSatelital, layerGoogleTerrain, bingRoad, gmap]);
 			
 
 			// Control de cambio de Capas
@@ -74,7 +78,7 @@
 			// Control de cursor
 			var controlCursor = new OpenLayers.Control.MousePosition();
 			map.addControl(controlCursor);
-/*
+
 			/// Capa consumiendo servicio WMS
 			var nombreWMS = "Límites departamentales";
 			var urlWMS = "http://geo.gob.bo/geoserver/wms";
@@ -87,6 +91,19 @@
 			layerDepartamentosWMS.setVisibility(false);
 			map.addLayer(layerDepartamentosWMS);
 
+			
+
+
+			var layerEolico = new OpenLayers.Layer.WMS(
+				"Puentes ABC",
+				host + ":8090/geoserver/wms",
+				{
+					layers: 'curso-gis:puestes_abc_2012',
+					transparent: true
+				}
+			);
+			map.addLayer(layerEolico);
+			layerEolico.setVisibility(false);
 			// Layer WMS desde geoserver Local
 			var layerEolico = new OpenLayers.Layer.WMS(
 				"Mapa Eólico",
@@ -112,11 +129,22 @@
 			layerEolicoPG.setVisibility(false);
 */
 			// Capa Presas 2010  
-		/*	var layerPresas = new OpenLayers.Layer.WMS(
+			var layerPresas = new OpenLayers.Layer.WMS(
 				"Mapa de Represas",
 				host + ":8090/geoserver/wms",
 				{
 					layers: 'curso-gis:Presas2010',
+					transparent: true
+				}
+			);
+			map.addLayer(layerPresas);
+			layerPresas.setVisibility(false);
+
+			var layerPresas = new OpenLayers.Layer.WMS(
+				"Mapa de Riesgo de granizo",
+				host + ":8090/geoserver/wms",
+				{
+					layers: 'curso-gis:riesgo_granizo_corocoro',
 					transparent: true
 				}
 			);
@@ -160,7 +188,7 @@
 			});
 			map.addControl(controlInfo);
 			controlInfo.activate();
-
+/*
 
 			// Configuración para mostrar la región de Bolivia
 			// Lon: -64.819336, Lat: -17.379999
@@ -194,11 +222,5 @@
 </form>
 </body>
 </html>
-
-
-
-
-
-
 
 
