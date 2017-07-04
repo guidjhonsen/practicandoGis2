@@ -35,7 +35,7 @@
 			var proyeccion2 = new OpenLayers.Projection("EPSG:4326");
 			var controlNavegacion = new OpenLayers.Control.Navigation();
 			var controlZoom = new OpenLayers.Control.PanZoomBar(); // Zoom
-			var host = "http://192.168.42.167";
+			var host = "http://192.168.42.140";
 		//	OpenLayers.ProxyHost = "/cgi-bin/proxy.cgi?url=";
 
 			// Propiedades del objeto Map
@@ -129,7 +129,7 @@
 			layerEolicoPG.setVisibility(false);
 */
 			// Capa Presas 2010  
-			var layerPresas = new OpenLayers.Layer.WMS(
+	/*		var layerPresas = new OpenLayers.Layer.WMS(
 				"Mapa de Represas",
 				host + ":8090/geoserver/wms",
 				{
@@ -138,7 +138,7 @@
 				}
 			);
 			map.addLayer(layerPresas);
-			layerPresas.setVisibility(false);
+			layerPresas.setVisibility(false);*/
 
 			var layerPresas = new OpenLayers.Layer.WMS(
 				"Mapa de Riesgo de granizo",
