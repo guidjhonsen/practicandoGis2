@@ -1,0 +1,15 @@
+<layer>
+  <name>puestes_abc_2012</name>
+  <id>LayerInfoImpl--7488bc2c:15d0756542e:-7ff4</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7488bc2c:15d0756542e:-7ff5</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

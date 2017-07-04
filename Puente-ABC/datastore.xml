@@ -1,0 +1,22 @@
+<dataStore>
+  <id>DataStoreInfoImpl--7488bc2c:15d0756542e:-7ff6</id>
+  <name>Puente-ABC</name>
+  <type>Shapefile</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--7488bc2c:15d0756542e:-7fff</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="charset">ISO-8859-1</entry>
+    <entry key="filetype">shapefile</entry>
+    <entry key="create spatial index">true</entry>
+    <entry key="memory mapped buffer">false</entry>
+    <entry key="timezone">America/La_Paz</entry>
+    <entry key="enable spatial index">true</entry>
+    <entry key="namespace">gurso-gis</entry>
+    <entry key="cache and reuse memory maps">true</entry>
+    <entry key="url">file:workspaces/curso-gis/shapes/puestes_abc_2012/puestes_abc_2012.shp</entry>
+    <entry key="fstype">shape</entry>
+  </connectionParameters>
+  <__default>false</__default>
+</dataStore>

@@ -1,0 +1,15 @@
+<layer>
+  <name>riesgo_granizo_corocoro</name>
+  <id>LayerInfoImpl--7488bc2c:15d0756542e:-7ff7</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe0</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7488bc2c:15d0756542e:-7ff8</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>
